@@ -34,6 +34,12 @@ def infer():
 
     image = Image.open(img_path)
 
+    # if we want to process multiple images, we can use a for loop
+    # for img_name in os.listdir(image_folder):
+    #     img_path = os.path.join(image_folder, img_name)
+    #     image = Image.open(img_path)
+    
+
     # load model, load weights and additional information (such as optimizer status, training status, etc.).
     model = torch.load(checkpoint_file, map_location=device, weights_only=False)
 
